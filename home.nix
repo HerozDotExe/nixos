@@ -33,6 +33,15 @@ in
         enable = true;
       };
 
+      programs.ssh = {
+        enable = true;
+        enableDefaultConfig = true;
+      };
+
+      programs.vesktop = {
+        enable = true;
+      };
+
       programs.git = {
         enable = true;
         settings.user = {
