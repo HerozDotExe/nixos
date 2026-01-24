@@ -82,6 +82,7 @@
     yelp
     simple-scan
     gnome-music
+    geary
   ];
 
   # Configure keymap in X11
