@@ -35,7 +35,7 @@ in
 
       programs.ssh = {
         enable = true;
-        enableDefaultConfig = true;
+        enableDefaultConfig = false;
       };
 
       programs.vesktop = {
