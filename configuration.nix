@@ -101,7 +101,14 @@
   users.users.heroz = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [ ];
+    packages = with pkgs; [
+      gnomeExtensions.blur-my-shell
+      gnomeExtensions.appindicator
+      gnomeExtensions.vitals
+      gnomeExtensions.clipboard-indicator
+      gnomeExtensions.forge
+      gnomeExtensions.media-controls
+    ];
   };
 
   # List packages installed in system profile.

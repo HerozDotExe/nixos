@@ -12,6 +12,7 @@ in
 {
   imports = [
     (import "${home-manager}/nixos")
+    ./dconf.nix
   ];
 
   home-manager.users.heroz =
