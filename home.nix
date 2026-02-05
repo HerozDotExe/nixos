@@ -22,6 +22,7 @@ in
         brave
         nixfmt-rfc-style
         nil
+        amberol
       ];
 
       # Fix duplicate brave entry in gnome apps
