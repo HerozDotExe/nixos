@@ -16,28 +16,49 @@
     ./home.nix
   ];
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      efiSupport = true;
-      devices = [ "nodev" ];
-      efiInstallAsRemovable = false;
-      extraEntries = ''
-        # Arch Linux EFI
-        menuentry "Arch Linux" {
-          chainloader (hd1,gpt1)/EFI/arch/grubx64.efi
-        }
-        # Windows Boot Manager
-        menuentry "Windows" {
-          chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-        }
-      '';
+  boot = {
+    # Grub config
+    loader = {
+      grub = {
+        enable = true;
+        efiSupport = true;
+        devices = [ "nodev" ];
+        efiInstallAsRemovable = false;
+        extraEntries = ''
+          # Arch Linux EFI
+          menuentry "Arch Linux" {
+            chainloader (hd1,gpt1)/EFI/arch/grubx64.efi
+          }
+          # Windows Boot Manager
+          menuentry "Windows" {
+            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          }
+        '';
+        gfxmodeEfi = "1920x1080x32";
+      };
+
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
     };
 
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
+    # Boot theme
+    plymouth = {
+      enable = true;
+      font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
+      logo = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
     };
+
+    # Silent boot
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "udev.log_level=3"
+    ];
+
+    loader.timeout = 5;
   };
 
   time.hardwareClockInLocalTime = true;
