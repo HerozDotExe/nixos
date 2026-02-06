@@ -26,6 +26,7 @@ in
         jetbrains.idea
         prismlauncher
         jdk21_headless
+        affine
       ];
 
       # Fix duplicate brave entry in gnome apps
