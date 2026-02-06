@@ -58,7 +58,7 @@
       "udev.log_level=3"
     ];
 
-    loader.timeout = 5;
+    loader.timeout = 2;
   };
 
   time.hardwareClockInLocalTime = true;
