@@ -23,6 +23,9 @@ in
         nixfmt-rfc-style
         nil
         amberol
+        jetbrains.idea
+        prismlauncher
+        jdk21_headless
       ];
 
       # Fix duplicate brave entry in gnome apps
