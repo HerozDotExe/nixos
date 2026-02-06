@@ -37,7 +37,7 @@ with lib.gvariant;
       };
 
       "org/gnome/desktop/wm/preferences" = {
-        num-workspaces = 2;
+        num-workspaces = 3;
       };
 
       "org/gnome/mutter" = {
