@@ -37,7 +37,7 @@ in
         };
         "org.prismlauncher.PrismLauncher" = {
           name = "Prism Launcher";
-          exec = "prismlauncher -d /run/media/heroz/Stockage/Jeux/PrismLauncher-8.4 %U";
+          exec = "prismlauncher -d /storage/Jeux/PrismLauncher-8.4 %U";
           comment="Discover, manage, and play Minecraft instances";
           type="Application";
           terminal=false;
