@@ -30,9 +30,20 @@ in
       ];
 
       # Fix duplicate brave entry in gnome apps
-      xdg.desktopEntries."com.brave.Browser" = {
-        name = "Brave";
-        noDisplay = true;
+      xdg.desktopEntries = {
+        "com.brave.Browser" = {
+          name = "Brave";
+          noDisplay = true;
+        };
+        "org.prismlauncher.PrismLauncher" = {
+          name = "Prism Launcher";
+          exec = "prismlauncher -d /run/media/heroz/Stockage/Jeux/PrismLauncher-8.4 %U";
+          comment="Discover, manage, and play Minecraft instances";
+          type="Application";
+          terminal=false;
+          startupNotify=true;
+          icon="org.prismlauncher.PrismLauncher";
+        };
       };
 
       programs.vscode = {

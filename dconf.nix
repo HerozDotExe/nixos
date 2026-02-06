@@ -60,6 +60,8 @@ with lib.gvariant;
           "org.gnome.Console.desktop"
           "org.gnome.Nautilus.desktop"
           "code.desktop"
+          "idea.desktop"
+          "vesktop.desktop"
         ];
         last-selected-power-profile = "performance";
       };
