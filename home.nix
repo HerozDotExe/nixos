@@ -53,6 +53,11 @@ in
       programs.ssh = {
         enable = true;
         enableDefaultConfig = false;
+        matchBlocks = {
+          "a8" = {
+            user = "heroz";
+          };
+        };
       };
 
       programs.vesktop = {
