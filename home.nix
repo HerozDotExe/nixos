@@ -27,6 +27,9 @@ in
         prismlauncher
         jdk21_headless
         affine
+        bat
+        micro
+        tldr
       ];
 
       # Fix duplicate brave entry in gnome apps
@@ -70,6 +73,14 @@ in
           name = "HerozDotExe";
           email = "herozdotexe@gmail.com";
         };
+      };
+
+      programs.nushell = {
+        enable = true;
+        extraConfig = ''
+          $env.config.buffer_editor = "micro"
+          $env.config.show_banner = false
+        '';
       };
 
       nixpkgs.config.allowUnfree = true;
