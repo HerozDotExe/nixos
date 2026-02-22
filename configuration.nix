@@ -130,6 +130,8 @@
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.forge
       gnomeExtensions.media-controls
+      nodejs_24
+      pnpm
     ];
   };
 
