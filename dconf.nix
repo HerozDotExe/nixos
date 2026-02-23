@@ -53,6 +53,7 @@ with lib.gvariant;
           "blur-my-shell@aunetx"
           "appindicatorsupport@rgcjonas.gmail.com"
           "mediacontrols@cliffniff.github.com"
+          "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         ];
         disabled-extensions = [ ];
         favorite-apps = [
@@ -83,6 +84,13 @@ with lib.gvariant;
         accel-profile = "default";
         natural-scroll = false;
         speed = -0.28205128205128205;
+      };
+
+      "org/gnome/shell/extensions/auto-move-windows" = {
+        application-list = [
+          "io.bassi.Amberol.desktop:3"
+          "vesktop.desktop:3"
+        ];
       };
     };
   };

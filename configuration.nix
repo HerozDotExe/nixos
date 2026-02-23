@@ -130,6 +130,8 @@
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.forge
       gnomeExtensions.media-controls
+      gnomeExtensions.auto-move-windows
+      gnome-tweaks
       nodejs_24
       pnpm
     ];
