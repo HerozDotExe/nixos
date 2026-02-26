@@ -59,6 +59,10 @@ in
           "a8" = {
             user = "heroz";
           };
+          # ubuntu vm
+          "192.168.122.85" = {
+            user = "heroz";
+          };
         };
       };
 
