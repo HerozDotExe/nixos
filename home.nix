@@ -25,7 +25,6 @@ in
         amberol
         jetbrains.idea
         prismlauncher
-        jdk21_headless
         affine
         bat
         micro
