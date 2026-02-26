@@ -122,7 +122,10 @@
   users.users.heroz = {
     shell = pkgs.nushell;
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "libvirtd"
+    ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       gnomeExtensions.blur-my-shell
       gnomeExtensions.appindicator
@@ -136,6 +139,10 @@
       pnpm
     ];
   };
+
+  virtualisation.libvirtd.enable = true;
+  boot.kernelModules = [ "kvm-intel" ];
+  programs.virt-manager.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -162,6 +169,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
